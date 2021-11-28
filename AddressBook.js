@@ -152,3 +152,11 @@ console.log("After Deletion");
 console.log(addressBookArray);
 let count = addressBookArray.reduce((counter, person) => counter + 1, 0);
 console.log(count);
+let person4 = new Contact("Sanu", "Abgcd", "Gtfvs", "Gtdhuj", "Ngtdbd","675873", "99 8756473425", "sanu23@gmail.com");
+if(addressBookArray.findIndex(contact => contact.firstName == person4.firstName) == -1){
+    addressBookArray[3] = person4;
+}
+else{
+    console.log("Duplicate Entry");
+}
+console.log(addressBookArray);
