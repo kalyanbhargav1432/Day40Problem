@@ -134,7 +134,12 @@ try{
     console.log(e);
 }
 let person1 = new Contact("Bhargav", "Tanniru", "Abcde", "RangaReddy", "Telangana", "522616", "88 8765445664","bhargav@gmail.com" );
+let person2 = new Contact("Simran", "Tanniru", "Abcde", "Guntur", "Andhrapradesh", "522616", "88 9165445664","simran@gmail.com" );
 let addressBookArray = [];
 addressBookArray[0] = person1;
-addressBookArray[1] = personContact;
+addressBookArray[1] = person2;
 console.log(addressBookArray);
+let objIndex = addressBookArray.findIndex((obj => obj.firstName == "Bhargav"));
+console.log("Before Update : " + addressBookArray[objIndex]);
+addressBookArray[objIndex].city = "Guntur";
+console.log("After Update : " + addressBookArray[objIndex]);
