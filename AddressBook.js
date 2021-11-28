@@ -160,3 +160,14 @@ else{
     console.log("Duplicate Entry");
 }
 console.log(addressBookArray);
+let person5 = new Contact("Jyothi", "Tanniru", "Defds", "Piduguralla", "Andhrapradesh", "654773", "76 8866744467", "jyothi20@gmail.com");
+addressBookArray[3] = person5;
+console.log(addressBookArray);
+
+let contacts = addressBookArray.filter(personContact => personContact.city == "Guntur");
+console.log("Contacts from city 'Guntur' are : ")
+console.log(contacts);
+
+let personFromState = addressBookArray.filter(personContact => personContact.state == "Telangana");
+console.log("Contacts from State 'Telangana' are : ");
+console.log(personFromState);
