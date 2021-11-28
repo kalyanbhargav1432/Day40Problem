@@ -188,3 +188,53 @@ function compare( a, b ) {
 
 console.log("AddressBook After Sorting");
 console.log(addressBookArray.sort(compare));
+
+console.log(addressBookArray);
+function compareByFirstName( a, b ) {
+    if ( a.firstName < b.firstName ){
+        return -1;
+    }
+    if ( a.firstName > b.firstName ){
+        return 1;
+    }
+        return 0;
+}
+
+function compareByCity( a, b ) {
+    if ( a.city < b.city ){
+        return -1;
+    }
+    if ( a.city > b.city ){
+        return 1;
+    }
+        return 0;
+}
+
+function compareByState( a, b ) {
+    if ( a.state < b.state ){
+        return -1;
+    }
+    if ( a.state > b.state ){
+        return 1;
+    }
+        return 0;
+}
+
+function compareByZip( a, b ) {
+    if ( a.zip < b.zip ){
+        return -1;
+    }
+    if ( a.zip > b.zip ){
+        return 1;
+    }
+        return 0;
+}
+
+console.log("AddressBook After Sorting by First Name");
+console.log(addressBookArray.sort(compareByFirstName));
+console.log("Sort Based on City");
+console.log(addressBookArray.sort(compareByCity));
+console.log("Sort Based on State");
+console.log(addressBookArray.sort(compareByState));
+console.log("Sort Based on Zip");
+console.log(addressBookArray.sort(compareByZip));
