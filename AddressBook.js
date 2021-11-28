@@ -174,3 +174,17 @@ console.log(personFromState);
 console.log("No.of Persons from city = 'Guntur' and state = 'Andhrapradesh' : ");
 let countByCity = addressBookArray.filter(person => person.city =="Guntur" && person.state == "Andhrapradesh").reduce((count, personContact) => count + 1, 0);
 console.log(countByCity);
+
+console.log(addressBookArray);
+function compare( a, b ) {
+    if ( a.firstName < b.firstName ){
+      return -1;
+    }
+    if ( a.firstName > b.firstName ){
+      return 1;
+    }
+    return 0;
+  }
+
+console.log("AddressBook After Sorting");
+console.log(addressBookArray.sort(compare));
