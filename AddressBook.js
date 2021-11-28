@@ -60,7 +60,7 @@ class Contact{
 
     get phoneNumber(){ return this._phoneNumber;}
     set phoneNumber(phoneNo){
-        let phoneRegex = new RegExp("^[0-9]{2}[0-9]{10}$");
+        let phoneRegex = new RegExp("^(\\d{2})( )([6-9]{1})(\\d{9})");
         if(phoneRegex.test(phoneNo)){
             this._phoneNumber = phoneNo;
         }else{
@@ -133,3 +133,8 @@ try{
 }catch(e){
     console.log(e);
 }
+let person1 = new Contact("Bhargav", "Tanniru", "Abcde", "RangaReddy", "Telangana", "522616", "88 8765445664","bhargav@gmail.com" );
+let addressBookArray = [];
+addressBookArray[0] = person1;
+addressBookArray[1] = personContact;
+console.log(addressBookArray);
