@@ -133,7 +133,7 @@ try{
 }catch(e){
     console.log(e);
 }
-let person1 = new Contact("Bhargav", "Tanniru", "Abcde", "RangaReddy", "Telangana", "522616", "88 8765445664","bhargav@gmail.com" );
+let person1 = new Contact("Bhargav", "Tanniru", "Abcde", "RangaReddy", "Andhrapradesh", "522616", "88 8765445664","bhargav@gmail.com" );
 let person2 = new Contact("Simran", "Tanniru", "Abcde", "Guntur", "Andhrapradesh", "522616", "88 9165445664","simran@gmail.com" );
 let addressBookArray = [];
 addressBookArray[0] = person1;
@@ -168,6 +168,9 @@ let contacts = addressBookArray.filter(personContact => personContact.city == "G
 console.log("Contacts from city 'Guntur' are : ")
 console.log(contacts);
 
-let personFromState = addressBookArray.filter(personContact => personContact.state == "Telangana");
-console.log("Contacts from State 'Telangana' are : ");
+let personFromState = addressBookArray.filter(personContact => personContact.state == "Andhrapradesh");
+console.log("Contacts from State 'Andhrapradesh' are : ");
 console.log(personFromState);
+console.log("No.of Persons from city = 'Guntur' and state = 'Andhrapradesh' : ");
+let countByCity = addressBookArray.filter(person => person.city =="Guntur" && person.state == "Andhrapradesh").reduce((count, personContact) => count + 1, 0);
+console.log(countByCity);
